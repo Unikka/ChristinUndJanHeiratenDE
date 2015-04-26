@@ -1,0 +1,20 @@
+##
+# "Timeline" element
+#
+prototype(Unikka.ChristinUndJanHeiratenDE:Timeline) {
+	templatePath = 'resource://Unikka.ChristinUndJanHeiratenDE/Private/Templates/NodeTypes/Timeline.html'
+	timelineItems = TYPO3.Neos:ContentCollection {
+		nodePath = 'timelineItems'
+	}
+
+	timelineItemArray = ${q(node).children('timelineItems').find('[instanceof Unikka.ChristinUndJanHeiratenDE:TimelineItem]').get()}
+}
+
+prototype(Unikka.ChristinUndJanHeiratenDE:TimelineItem) {
+	templatePath = 'resource://Unikka.ChristinUndJanHeiratenDE/Private/Templates/NodeTypes/TimelineItem.html'
+	iteration = ${timelineItemsIteration}
+	pointInTime = ${q(node).property('pointInTime')}
+	headline = ${q(node).property('headline')}
+	description = ${q(node).property('description')}
+	image = ${q(node).property('image')}
+}

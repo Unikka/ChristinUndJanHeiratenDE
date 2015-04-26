@@ -1,6 +1,6 @@
 /**
- * Root TypoScript template for the christinundjanheiraten.de site
- */
+* Root TypoScript template for the wedding site of christin and jan
+*/
 page = Page {
 	head {
 		stylesheets.site = TYPO3.TypoScript:Template {
@@ -19,11 +19,9 @@ page = Page {
 		sectionName = 'body'
 		parts {
 			menu = Menu
-			breadcrumb = Breadcrumb
 		}
-		// These are your content areas, you can define as many as you want, just name them and the nodePath.
+
 		content {
-			// The default content section
 			main = PrimaryContent {
 				nodePath = 'main'
 			}
