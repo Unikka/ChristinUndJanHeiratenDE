@@ -1,7 +1,7 @@
 {
     "name": "unikka/christinundjanheiratende",
     "type": "typo3-flow-site",
-    "description": "Add description here",
+    "description": "This is a site package for the CMS TYPO3 neos.",
     "require": {
         "typo3/neos": "*",
         "typo3/neos-nodetypes": "*"
